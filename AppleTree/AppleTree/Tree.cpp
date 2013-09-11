@@ -22,3 +22,12 @@ int Tree::Grow()
 	AppNum += rand() % 1000;
 	return AppNum;
 }
+
+int Tree::Shake()
+{
+	srand((unsigned int) time(NULL));
+	AppNum -= rand() % 1000;
+	if (AppNum < 0)
+		AppNum = 0;
+	return AppNum;
+}

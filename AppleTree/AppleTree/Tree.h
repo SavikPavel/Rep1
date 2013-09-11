@@ -10,4 +10,5 @@ public:
 	bool setAppNum(int);
 	Tree();
 	int Grow();
+	int Shake();
 };
