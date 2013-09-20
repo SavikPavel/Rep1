@@ -14,12 +14,19 @@ bool Tree::setAppNum(int value)
 Tree::Tree()
 {
 	AppNum = 0;
+	FlowersNum = 0;
+}
+int Tree::Bloom()
+{
+	srand((unsigned int) time(NULL));
+	FlowersNum += rand() % 1000;
+	return FlowersNum;
 }
 
 int Tree::Grow()
 {
-	srand((unsigned int) time(NULL));
-	AppNum += rand() % 1000;
+	AppNum = FlowersNum;
+	FlowersNum = 0;
 	return AppNum;
 }
 

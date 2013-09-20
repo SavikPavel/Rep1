@@ -8,17 +8,22 @@ int main()
 	int choice = 0, n = 0;
 	Tree MyAppleTree;
 	cout << "\t\tThis is Apple Tree application!\n";
-	while (choice != 3)
+	while (choice != 4)
 	{
-		cout << "1. Grow some apples\n2. Shake!\n3. Exit\n";
+		cout << "1. Bloom!\n2. Grow some apples\n3. Shake!\n4. Exit\n";
 		cin >> choice;
 		system("cls");
 		if (choice == 1)
 		{
+			n = MyAppleTree.Bloom();
+			cout << "There are " << n << " flowers in your tree\n"; 
+		}
+		else if (choice == 2)
+		{
 			n = MyAppleTree.Grow();
 			cout << "There are " << n << " apples in your tree\n"; 
 		}
-		else if (choice == 2)
+		else if (choice == 3)
 		{
 			n = MyAppleTree.Shake();
 			cout << "There are " << n << " apples in your tree\n"; 
